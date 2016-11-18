@@ -1,5 +1,5 @@
 # GoTop
-Simple animated scroll "Go to Top" javascript with no dependencies
+A simple animated scroll "Go to Top" javascript with no dependencies within only 557 Bytes to do the trick.
 
 ## Demo & How to use
 
