@@ -10,7 +10,7 @@ Just add the script before your last `</body>` tag and a link with an ID "gotop"
 That's all!
 You can specify an anchor as a target for fallback (if javascript is disabled).
 
-See it in action here: [https://jsfiddle.net/f987rqgw/](https://jsfiddle.net/f987rqgw/2/ "Check out")
+See it in action here: [https://jsfiddle.net/f987rqgw/](https://jsfiddle.net/f987rqgw/5/ "Check out")
 
 ##Browsers Support
 
