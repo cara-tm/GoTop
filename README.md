@@ -12,11 +12,13 @@ You can specify an anchor as a target for fallback (if javascript is disabled).
 
 See it in action here: [https://jsfiddle.net/f987rqgw/](https://jsfiddle.net/f987rqgw/5/ "Check out")
 
-##Browsers Support
+## Browsers Support
+
+Despite the anchor target as a fallback, tested successfuly within:
 
 * Google Chromium 1 and up;
 * FireFox 1.0.8 and up;
 * Safari
 * Opera 0.8 and up;
 * Midori 0.4 and up;
-* Internet Explorer
+* Internet Explorer all versions.
