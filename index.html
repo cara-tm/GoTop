@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GoTop script demo</title>
+<style>
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+.wrapper {
+    width: 100%;
+    height: 2000px;
+    height: 300vh
+}
+#gotop {
+display: table-cell;
+display: inline-block;
+opacity: 0;
+position: absolute;
+position: fixed;
+z-index: 100;
+right: 6%;
+bottom: 15%;
+text-decoration: none;
+outline: none;
+color: #333;
+font: normal normal normal 1em/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+touch-action: none;
+cursor: pointer;
+
+-webkit-transition-property: opacity;
+-o-transition-property: opacity;
+transition-property: opacity;
+-webkit-transition-duration: .2s;
+     -o-transition-duration: .2s;
+        transition-duration: .2s;
+-webkit-transition-timing-function: ease-in-out;
+     -o-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+-webkit-transition-delay: 0;
+     -o-transition-delay: 0;
+        transition-delay: 0;
+}
+html #gotop.visible {opacity: 1}
+
+</style>
+</head>
+
+<body id="top">
+<div class="wrapper"></div>
+<a href="#top" title="Go Top" class="visible" id="gotop">↑&thinsp;Top</a>
+<script>
+/*! Simple animated 'Go to Top' scroll by cara-tm.com, MIT license. */
+'use strict';var _dis=document.body.clientHeight||document.documentElement.clientHeight,_el=document.getElementById('gotop');window.onscroll=function(){_el.className=document.documentElement.scrollTop>_dis-100?'visible':''};
+_el.onclick=function(z){function o(){n=(new Date()).getTime()-u,e>n&&(t.scrollTop=a-a*(1-Math.cos(n/e*Math.PI))/2,c=setTimeout(function(){o();},10));}var e=(document.body.offsetHeight||document.documentElement.offsetHeight||window.innerHeight)+100,t='BackCompat'==document.compatMode?document.body:document.documentElement;0===t.scrollTop&&(t=document.body);var c,n,m=t.scrollTop,u=(new Date()).getTime(),a=m;clearTimeout(c),o();return false;};
+</script>
+</body></html>
