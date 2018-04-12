@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>GoTop script demo</title>
+
 <style>
 html,
 body {
@@ -31,9 +33,13 @@ font: normal normal normal 1em/1.5 'Helvetica Neue', Helvetica, Arial, sans-seri
 touch-action: none;
 cursor: pointer;
 
--webkit-transition-property: opacity;
--o-transition-property: opacity;
-transition-property: opacity;
+-webkit-transform: translate(0, 0) scale(.8);
+-ms-transform: translate(0, 0) scale(.8);
+transform: translate(0, 0) scale(.8);
+
+-webkit-transition-property: opacity, transform;
+-o-transition-property: opacity, transform;
+transition-property: opacity, transform;
 -webkit-transition-duration: .2s;
      -o-transition-duration: .2s;
         transition-duration: .2s;
@@ -44,9 +50,15 @@ transition-property: opacity;
      -o-transition-delay: 0;
         transition-delay: 0;
 }
-html #gotop.visible {opacity: 1}
+html #gotop.visible {
+    opacity: 1;
+    -webkit-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+    transform: translate(0, 0) scale(1)
+}
 
 </style>
+
 </head>
 
 <body id="top">
