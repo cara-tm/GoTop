@@ -18,7 +18,8 @@ Despite the anchor target as a fallback, tested successfuly within:
 
 * Google Chromium 1 and up;
 * FireFox 1.0.8 and up;
-* Safari
+* Safari;
 * Opera 0.8 and up;
 * Midori 0.4 and up;
+* Netscape Navigator 9;
 * Internet Explorer all versions.
