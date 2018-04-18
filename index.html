@@ -2,8 +2,12 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
 <title>GoTop script demo</title>
+
+<script>
+document.documentElement.className='js '+(!document.createElementNS||!document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect?'nosvg':'svg');
+</script>
 
 <style>
 html,
@@ -67,6 +71,9 @@ html #gotop.visible {
     -ms-transform: translate(0, 0) scale(1);
     transform: translate(0, 0) scale(1)
 }
+#gotop svg,
+    .svg #gotop span{display: none}
+.svg #gotop svg{display: block}
 
 </style>
 
@@ -78,10 +85,10 @@ html #gotop.visible {
 </div> <!-- /wrapper -->
 
 <div class="footer"></div>
-<a href="#top" title="Go Top" class="visible" id="gotop">↑&thinsp;Top</a>
+<a href="#top" title="Go Top" class="visible" id="gotop"><svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 512 512" class="svg-inline--w-16" font-size="1em"><path d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm231-113.9L103.5 277.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L256 226.9l101.6 101.6c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L273 142.1c-9.4-9.4-24.6-9.4-34 0z" fill="currentColor"/></svg><span>↑&thinsp;Top</span></a>
 <script>
 /*! Simple animated 'Go to Top' scroll by cara-tm.com, MIT license. */
-var distance=700, link='gotop',
-D=document,_h=(D.body.clientHeight||D.documentElement.clientHeight),_dis=Math.max(D.body.scrollHeight,D.documentElement.scrollHeight,D.body.offsetHeight,D.documentElement.offsetHeight,D.body.clientHeight,D.documentElement.clientHeight,D.body.scrollHeight),_el=document.getElementById(link);if(typeof(_el)!='undefined'&&_el!=null){window.onscroll=function(){_el.className=(window.pageYOffset||D.documentElement.scrollTop)>_dis-_h-distance?'visible':''},_el.onclick=function(){function d(){k=new Date().getTime()-p,f>k&&(g.scrollTop=q-q*(1-Math.cos(k/f*Math.PI))/2,j=setTimeout(function(){d()},10))}var g='BackCompat'==D.compatMode?D.body:D.documentElement;0===g.scrollTop&&(g=D.body);var j,k,l=g.scrollTop,p=new Date().getTime(),q=l;return clearTimeout(j),d(),!1};}
+var distance=700, link='gotop', adjust=100,
+D=document,_h=(D.body.clientHeight||D.documentElement.clientHeight),_dis=Math.max(D.body.scrollHeight,D.documentElement.scrollHeight,D.body.offsetHeight,D.documentElement.offsetHeight,D.body.clientHeight,D.documentElement.clientHeight,D.body.scrollHeight),_el=document.getElementById(link);if(typeof(_el)!='undefined'&&_el!=null){window.onscroll=function(){_el.className=(window.pageYOffset||D.documentElement.scrollTop)>_dis-_h-distance?'visible':''},_el.onclick=function(){function d(){k=new Date().getTime()-p,f>k&&(g.scrollTop=q-q*(1-Math.cos(k/f*Math.PI))/2,j=setTimeout(function(){d()},10))}var f=_h+adjust,g='BackCompat'==D.compatMode?D.body:D.documentElement;0===g.scrollTop&&(g=D.body);var j,k,l=g.scrollTop,p=new Date().getTime(),q=l;return clearTimeout(j),d(),!1};}
 </script>
 </body></html>
