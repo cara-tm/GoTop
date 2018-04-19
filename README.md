@@ -16,7 +16,7 @@ The [first strings into the script](https://github.com/cara-tm/GoTop/blob/master
 
 * `distance`: The distance in pixels from the bottom of the HTML document when the go top link appears. Default: `300`
 * `link`: The ID name associated to your link. Default: `'gotop'`
-* `adjust`: Allows to correct the final position to the top of the HTML document on the scrolling animation (if needed). Default: `100`
+* `adjust`: Allows to correct the final position in pixels to the top of the HTML document on the scrolling animation (if needed: due to extra spaces (personal bookmarks, extensions, etc.) into the browsers window). Default: `100`
 
 See [the `demo.html` file for example](https://github.com/cara-tm/GoTop/blob/master/demo.html "Discover").
 
