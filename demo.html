@@ -44,7 +44,7 @@ display: inline-block;
 opacity: 0;
 position: absolute;
 position: fixed;
-z-index: 100;
+z-index: -1;
 right: 6%;
 bottom: 15%;
 text-decoration: none;
@@ -73,6 +73,7 @@ transition-property: opacity, transform;
 }
 html #gotop.visible {
     opacity: 1;
+    z-index: 1000;
     -webkit-transform: translate(0, 0) scale(1);
     -ms-transform: translate(0, 0) scale(1);
     transform: translate(0, 0) scale(1)
