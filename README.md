@@ -10,7 +10,17 @@ Just add the script before your last `</body>` tag and a link with an ID "gotop"
 That's all!
 You can specify an anchor as a target for fallback (if javascript is disabled).
 
-See it in action here: [https://jsfiddle.net/f987rqgw/](https://jsfiddle.net/f987rqgw/5/ "Check out")
+## Settings
+
+The [first strings into the script](https://github.com/cara-tm/GoTop/blob/master/GoTop.min.js#L2) allow you to set some variables which govern the behaviours:
+
+* `distance`: The distance in pixels from the footer of the HTML document when the go top link appears. Default: `300`
+* `link`: The ID name associated to your link. Default: `'gotop'`
+* `adjust`: Allows to correct the final position to the top of the HTML document on the scrolling animation (if needed). Default: `100`
+
+See [the `demo.html` file for example](https://github.com/cara-tm/GoTop/blob/master/demo.html "Discover").
+
+See it in action here: [https://jsfiddle.net/f987rqgw/](https://jsfiddle.net/f987rqgw/5/ "Try it")
 
 ## Browsers Support
 
