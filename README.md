@@ -31,5 +31,5 @@ Despite the anchor target as a fallback, tested successfuly within:
 * Safari;
 * Opera 0.8 and up;
 * Midori 0.4 and up;
-* Netscape Navigator 9;
+* Netscape Navigator 7.1 (with no SVG as an icon for the link);
 * Internet Explorer all versions.
