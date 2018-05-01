@@ -11,9 +11,10 @@ body {
     height: 100%;
     height: 100vh;
     margin: 0;
-    padding: 0;
-    scroll-behavior: smooth
+    padding: 0
 }
+/*! The new way in pure CSS for modern browsers */
+body {scroll-behavior: smooth}
 .wrapper {
     width: 100%;
     height: 2000px;
@@ -38,15 +39,14 @@ background:transparent url(https://is.muni.cz/do/fsps/e-learning/volejbal/lib/45
 }
 #gotop {
 display: none;
--ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
-filter: alpha(opacity=0);
--khtml-opacity: 0;
--moz-opacity: 0;
-opacity: 0;
 position: absolute;
 position: fixed;
+position: sticky;
 right: 6%;
 bottom: 15%;
+float: right;
+width: 3em;
+height: 3.375em;
 text-decoration: none;
 outline: none;
 color: #333;
@@ -54,6 +54,12 @@ font: normal normal normal 1em/1.5 'Helvetica Neue', Helvetica, Arial, sans-seri
 touch-action: none;
 cursor: pointer;
 zoom: 1;
+
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+filter: alpha(opacity=0);
+-khtml-opacity: 0;
+-moz-opacity: 0;
+opacity: 0;
 
 -webkit-transform: translate(0, 0) scale(.8);
 -ms-transform: translate(0, 0) scale(.8);
@@ -110,6 +116,6 @@ html #gotop.visible {
 <script>
 /*! Simple animated 'Go to Top' scroll by cara-tm.com, MIT license. */
 var distance=700, link='gotop', adjust=100,
-D=document,_h=(D.body.clientHeight||D.documentElement.clientHeight),_dis=Math.max(D.body.scrollHeight,D.documentElement.scrollHeight,D.body.offsetHeight,D.documentElement.offsetHeight,D.body.clientHeight,D.documentElement.clientHeight,D.body.scrollHeight),_el=document.getElementById(link);if(typeof(_el)!='undefined'&&_el!=null){window.onscroll=function(){_el.className=(window.pageYOffset||D.documentElement.scrollTop)>_dis-_h-distance?'visible':''},_el.onclick=function(){function d(){k=new Date().getTime()-p,f>k&&(g.scrollTop=q-q*(1-Math.cos(k/f*Math.PI))/2,j=setTimeout(function(){d()},10))}var f=_h+(window.innerHeight-window.outerHeight||adjust),g='BackCompat'==D.compatMode?D.body:D.documentElement;0===g.scrollTop&&(g=D.body);var j,k,l=g.scrollTop,p=new Date().getTime(),q=l;return clearTimeout(j),d(),!1};}
+D=document,_h=(D.body.clientHeight||D.documentElement.clientHeight),_dis=Math.max(D.body.scrollHeight,D.documentElement.scrollHeight,D.body.offsetHeight,D.documentElement.offsetHeight,D.body.clientHeight,D.documentElement.clientHeight,D.body.scrollHeight),_el=document.getElementById(link);if(typeof(_el)!='undefined'&&_el!=null){window.onscroll=function(){_el.className=(window.pageYOffset||D.documentElement.scrollTop)>_dis-_h-distance?'visible':''},_el.onclick=function(){function d(){k=new Date().getTime()-p,f>k&&(g.scrollTop=q-q*(1-Math.cos(k/f*Math.PI))/0.2,j=setTimeout(function(){d()},10))}var f=_h+(window.innerHeight-window.outerHeight||adjust),g='BackCompat'==D.compatMode?D.body:D.documentElement;0===g.scrollTop&&(g=D.body);var j,k,l=g.scrollTop,p=new Date().getTime(),q=l;return clearTimeout(j),d(),!1};}
 </script>
 </body></html>
