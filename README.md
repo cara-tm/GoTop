@@ -20,6 +20,8 @@ The [first strings into the script](https://github.com/cara-tm/GoTop/blob/master
 * `link`: The ID name associated to your link. Default: `'gotop'`
 * `adjust`: Allows to correct the final position in pixels to the top of the HTML document on the scrolling animation (if needed: due to extra spaces (personal bookmarks, extensions, etc.) into the browsers window. Despite the script evaluate this behavior, consider this as a fallback for old browsers). Default: `100`
 
+Automatic detection of "smooth-scroll" property for modern browsers; fallback to internal animation for all others browsers.
+
 See [the `demo.html` file for example](https://github.com/cara-tm/GoTop/blob/master/demo.html "Discover").
 
 See it in action here: [https://jsfiddle.net/f987rqgw/](https://jsfiddle.net/f987rqgw/5/ "Try it")
