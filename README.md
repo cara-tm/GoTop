@@ -14,7 +14,9 @@ You can specify an anchor as a target for fallback (if javascript is disabled).
 
 The [first strings into the script](https://github.com/cara-tm/GoTop/blob/master/GoTop.min.js#L2) allow you to set some variables which govern the behaviours:
 
+* `showme`: Set to `1` to show the link on page load or set to `0` to hidde it on page load
 * `distance`: The distance in pixels from the bottom of the HTML document when the go top link appears. Default: `300`
+* `fromTop`: Set to `1` for the link's revelation based on the `distance` value from the top of the document, set to `0` for opposite.
 * `link`: The ID name associated to your link. Default: `'gotop'`
 * `adjust`: Allows to correct the final position in pixels to the top of the HTML document on the scrolling animation (if needed: due to extra spaces (personal bookmarks, extensions, etc.) into the browsers window. Despite the script evaluate this behavior, consider this as a fallback for old browsers). Default: `100`
 
